@@ -129,8 +129,8 @@ public class MainWindow extends JFrame {
 
         JScrollPane scroll = new JScrollPane(processTable);
         styleScrollPane(scroll);
-        scroll.setPreferredSize(new Dimension(358, 220));
-        scroll.setMaximumSize(new Dimension(Integer.MAX_VALUE, 220));
+        scroll.setPreferredSize(null);
+        scroll.setMaximumSize(new Dimension(Integer.MAX_VALUE, Integer.MAX_VALUE));
 
         JPanel card = card();
         card.setLayout(new BorderLayout());
