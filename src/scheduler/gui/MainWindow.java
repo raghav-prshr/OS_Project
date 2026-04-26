@@ -417,13 +417,17 @@ public class MainWindow extends JFrame {
     }
 
     private void styleSpinner(JSpinner sp) {
-        sp.setBackground(BG_CARD);
-        sp.setForeground(TEXT_MAIN);
-        sp.setFont(new Font("Consolas", Font.PLAIN, 12));
-        ((JSpinner.DefaultEditor) sp.getEditor()).getTextField().setBackground(BG_CARD);
-        ((JSpinner.DefaultEditor) sp.getEditor()).getTextField().setForeground(TEXT_MAIN);
-        ((JSpinner.DefaultEditor) sp.getEditor()).getTextField().setFont(new Font("Consolas", Font.PLAIN, 12));
-    }
+    sp.setBackground(Color.WHITE);
+    sp.setForeground(Color.BLACK);
+
+    JSpinner.DefaultEditor editor = (JSpinner.DefaultEditor) sp.getEditor();
+    JTextField tf = editor.getTextField();
+
+    tf.setBackground(Color.WHITE);
+    tf.setForeground(Color.BLACK);
+    tf.setCaretColor(Color.BLACK);
+    tf.setFont(new Font("Consolas", Font.BOLD, 12));
+}
 
     private JButton accentButton(String text, Color color) {
         JButton b = new JButton(text);
